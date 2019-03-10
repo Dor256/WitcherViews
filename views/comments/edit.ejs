@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1>Edit Comment</h1>
+        <div class="form">
+            <form action="/locations/<%= location_id %>/comments/<%= comment._id %>?method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" name="comment[text]" type="text" value="<%= comment.text %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a class="go-back" href="/locations">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

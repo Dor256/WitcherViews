@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+}
+
+#landing-header {
+    z-index: 1;
+    width: 30%;
+    height: 150px;
+    position: relative;
+    text-align: center;
+    margin-top: 40vh;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#landing-header h1 {
+    color: white;
+}
+
+#landing-header a {
+    margin-top: 4%;
+}
+
+.slideshow {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: url(https://sm.ign.com/ign_in/screenshot/default/witcher3pc-12_de8v.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://images5.alphacoders.com/415/thumb-1920-415509.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://blog.forest-interactive.com/wp-content/uploads/2018/10/Witcher-3.jpg);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(http://i.imgur.com/r3WMbta.png);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://hdqwalls.com/download/the-witcher-3-wild-hunt-game-3840x2160.jpg);
+    animation-delay: 40s; 
+  }
+
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }

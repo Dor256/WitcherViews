@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1><img id="icon" src="http://www.rw-designer.com/icon-image/14773-256x256x32.png"> Welcome To The Continent</h1>
+            <p id="desc-note">Breathtaking views from The Witcher universe</p>
+            <p id="add-location">
+                <a class="btn btn-primary btn-lg" href="/locations/new">Add a New Location</a>
+            </p>
+        </div>
+    </header>
+    <div class="row">
+        <% for(location of locations) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail text-center">
+                    <img src="<%= location.image %>" alt="<%= location.name %>">
+                    <div class="caption">
+                        <h4><%= location.name %></h4>
+                    </div>
+                    <p id="more-info">
+                        <a class="btn btn-primary" href="/locations/<%= location._id %>">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>

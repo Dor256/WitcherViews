@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1>Create a New Location</h1>
+        <div class="form">
+            <form action="/locations" method="POST">
+                <div class="form-group">
+                    <input class="form-control" name="name" type="text" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="region" type="text" placeholder="Region">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="img" type="text" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                 <input class="form-control" name="desc" type="text" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a class="go-back" href="/locations">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

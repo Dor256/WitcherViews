@@ -1,0 +1,72 @@
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-transform: capitalize;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+img#icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+}
+
+img#brand {
+    width: 54px;
+    height: 54px;
+}
+
+.navbar-brand.text {
+    margin-left: 20px;
+}
+
+#desc-note {
+    text-align: left;
+    padding-left: 127px;
+}
+
+#more-info {
+    padding: 0;
+    text-align: center;
+}
+
+#info-title {
+    text-transform: capitalize;
+}
+
+#add-location {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+
+.form {
+    width: 30%;
+    margin: 25px auto;
+}
+
+.go-back {
+    line-height: 3;
+}

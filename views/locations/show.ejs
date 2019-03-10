@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">WitcherViews</p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 2</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="image-responsive" src="<%= location.image %>" alt="">
+                <div class="caption-full">
+                    <h4 class="pull-right"><%= location.region %></h4>
+                    <h4 id="info-title"><a href=""><%= location.name %></a></h4>
+                    <p><%= location.desc %></p>
+                    <p><em>Submitted by <%= location.author.username %></em></p>
+                    <% if(currentUser && location.author.id.equals(currentUser._id)) { %>
+                        <a class="btn btn-warning" href="/locations/<%= location._id %>/edit">Edit</a>
+                        <form class="delete-form" action="/locations/<%= location._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/locations/<%= location._id %>/comments/new">Add Comment</a>
+                </div>
+                <hr>
+                <% for(comment of location.comments) { %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= comment.author.username %></strong> 
+                            <span class="pull-right">10 days ago</span>
+                            <p><%= comment.text %></p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                                <a href="/locations/<%= location._id %>/comments/<%= comment._id %>/edit" class="btn btn-xs btn-warning">Edit</a>
+                                <form class="delete-form" action="/locations/<%= location._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger">Delete</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
