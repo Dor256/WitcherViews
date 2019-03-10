@@ -13,8 +13,8 @@ import { router as authRoutes } from "./routes/index";
 import { seedDB } from "./seeds";
 
 // seedDB();
-// mongodb://localhost/witcher-camp
-mongoose.connect("mongodb+srv://dor256:odin256@ocluster-7qisk.mongodb.net/test?retryWrites=true");
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb+srv://dor256:odin256@ocluster-7qisk.mongodb.net/test?retryWrites=true");
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
