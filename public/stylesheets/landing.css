@@ -83,3 +83,23 @@ body {
       opacity: 0
     }
   }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 15px;
+    }
+
+    a.btn {
+      font-size: 0.5em;
+    }
+
+    #landing-header.container {
+      height: 150px;
+    }
+  }
+
+  @media screen and (max-width: 1445px) {
+    #landing-header {
+      height: 200px;
+    }
+  }

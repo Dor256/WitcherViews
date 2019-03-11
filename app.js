@@ -12,9 +12,9 @@ import { router as commentRoutes } from "./routes/comments";
 import { router as authRoutes } from "./routes/index";
 import { seedDB } from "./seeds";
 
+const url = process.env.DATABASEURL || "mongodb://localhost/witcher-camp";
 // seedDB();
-mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb+srv://dor256:odin256@ocluster-7qisk.mongodb.net/test?retryWrites=true");
+mongoose.connect(url);
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
